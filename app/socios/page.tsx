@@ -140,19 +140,28 @@ export default function SociosPage() {
           <label htmlFor="rut" className="block text-sm font-semibold text-gold">
             RUT del socio
           </label>
-          <input
-            id="rut"
-            type="text"
-            inputMode="numeric"
-            placeholder="12.345.678-9"
-            value={rut}
-            onChange={(e) => handleRutChange(e.target.value)}
-            className={`w-full bg-black border rounded-lg px-4 py-3 text-white text-lg tracking-widest placeholder:text-zinc-600 focus:ring-2 transition-all ${
-              rutError
-                ? 'border-red-boxing focus:ring-red-boxing/30'
-                : 'border-gold/30 focus:border-gold focus:ring-gold/20'
-            }`}
-          />
+          <div className="flex gap-2">
+            <input
+              id="rut"
+              type="text"
+              inputMode="numeric"
+              placeholder="12.345.678-9"
+              value={rut}
+              onChange={(e) => handleRutChange(e.target.value)}
+              className={`flex-1 bg-black border rounded-lg px-4 py-3 text-white text-lg tracking-widest placeholder:text-zinc-600 focus:ring-2 transition-all ${
+                rutError
+                  ? 'border-red-boxing focus:ring-red-boxing/30'
+                  : 'border-gold/30 focus:border-gold focus:ring-gold/20'
+              }`}
+            />
+            <button
+              type="button"
+              onClick={() => handleRutChange(rut + 'k')}
+              className="bg-zinc-800 hover:bg-zinc-700 border border-gold/30 text-gold font-black text-lg px-4 rounded-lg transition-colors shrink-0"
+            >
+              K
+            </button>
+          </div>
           {rutError && (
             <p className="text-red-400 text-xs flex items-center gap-1">
               <span>⚠</span> {rutError}
