@@ -126,7 +126,7 @@ export default function SociosPage() {
       {/* Header */}
       <div className="text-center space-y-2">
         <Image
-          src="/imagen20.png"
+          src="/guantesBoxeoCharly.png"
           alt="Guantes de box"
           width={450}
           height={450}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 
+
 export const metadata: Metadata = {
   title: 'Charly Boxing Team | Iquique',
   description: 'Gimnasio de boxeo en Iquique, Chile. Entrena con los mejores.',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className="bg-background text-foreground antialiased min-h-screen">
+      <body className="bg-background text-foreground antialiased min-h-screen overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
         <footer className="border-t border-gold/20 mt-16 py-6 text-center text-silver text-xs">

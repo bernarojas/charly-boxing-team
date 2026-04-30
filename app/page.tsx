@@ -14,7 +14,6 @@ const MapComponent = dynamic(() => import('@/components/MapComponent'), {
 export default function HomePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-16">
-
       {/* HERO */}
       <section className="flex flex-col items-center text-center gap-6">
         <Image
