@@ -18,8 +18,8 @@ export default function HomePage() {
       {/* HERO */}
       <section className="flex flex-col items-center text-center gap-6">
         <Image
-          src="/CBT_fotografia.png"
-          //src="/CBT_dorado.png"
+          //src="/CBT_fotografia.png"
+          src="/CBT_dorado.png"
           alt="Charly Boxing Team"
           width={500}
           height={500}
