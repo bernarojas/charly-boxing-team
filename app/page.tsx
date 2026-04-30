@@ -19,8 +19,8 @@ export default function HomePage() {
       <section className="flex flex-col items-center text-center gap-6">
         <Image
           //src="/imagen9.png"
-          src="/imagen10.png"
-          //src="/CBT_dorado.png"
+          //src="/imagen10.png"
+          src="/imagen11.png"
           //src="/CBT_dorado.png"
           //src="/CBT_dorado.png"
           //src="/imagen5.png"
