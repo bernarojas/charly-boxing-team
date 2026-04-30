@@ -208,15 +208,8 @@ export default function SociosPage() {
               <div>
                 <p className="text-gold text-xs font-semibold uppercase tracking-wider">Socio</p>
                 <h2 className="text-2xl font-black text-white mt-1">{result.cliente.nombre}</h2>
-                <p className="text-silver text-sm mt-1">{result.cliente.rut}</p>
+                <p className="text-silver text-sm mt-1">{formatearRut(result.cliente.rut)}</p>
               </div>
-              <span className={`text-xs font-bold px-2 py-1 rounded-full shrink-0 mt-1 ${
-                result.cliente.activo
-                  ? 'bg-green-900/40 text-green-400 border border-green-700/50'
-                  : 'bg-red-900/40 text-red-400 border border-red-700/50'
-              }`}>
-                {result.cliente.activo ? 'Activo' : 'Inactivo'}
-              </span>
             </div>
           </div>
 
@@ -225,7 +218,6 @@ export default function SociosPage() {
             {result.membresia ? (
               <div className="space-y-5">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <h3 className="text-lg font-black text-white break-all">{result.membresia.plan}</h3>
                   <div className="shrink-0">
                     <EstadoBadge dias={result.membresia.dias_restantes} />
                   </div>
