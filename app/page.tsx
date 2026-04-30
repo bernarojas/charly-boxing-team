@@ -20,7 +20,7 @@ export default function HomePage() {
         <Image
           //src="/imagen9.png"
           //src="/imagen10.png"
-          src="/imagen11.png"
+          src="/imagen12.png"
           //src="/CBT_dorado.png"
           //src="/CBT_dorado.png"
           //src="/imagen5.png"
