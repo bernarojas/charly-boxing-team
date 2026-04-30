@@ -72,7 +72,7 @@ export default function HomePage() {
         <SectionTitle icon="🕐" text="Horarios de Entrenamiento" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
           {[
-            { dia: 'Lunes - Viernes', hora: '19:30 - 21:00' },
+            { dia: 'Lunes - Viernes', hora: '18:00 - 19:30 / 19:30 - 21:00' },
             { dia: 'Sábado', hora: '10:30 - 12:00' },
             { dia: 'Domingo', hora: 'Cerrado' },
           ].map((h) => (
