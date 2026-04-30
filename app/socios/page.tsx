@@ -140,28 +140,19 @@ export default function SociosPage() {
           <label htmlFor="rut" className="block text-sm font-semibold text-gold">
             RUT del socio
           </label>
-          <div className="relative">
-            <input
-              id="rut"
-              type="text"
-              inputMode="numeric"
-              placeholder="12.345.678-9"
-              value={rut}
-              onChange={(e) => handleRutChange(e.target.value)}
-              className={`w-full bg-black border rounded-lg px-4 py-3 pr-16 text-white text-lg tracking-widest placeholder:text-zinc-600 focus:ring-2 transition-all ${
-                rutError
-                  ? 'border-red-boxing focus:ring-red-boxing/30'
-                  : 'border-gold/30 focus:border-gold focus:ring-gold/20'
-              }`}
-            />
-            <button
-              type="button"
-              onClick={() => handleRutChange(rut + 'k')}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-zinc-700 border border-gold/40 text-gold font-black text-sm px-3 py-1.5 rounded-md transition-colors"
-            >
-              K
-            </button>
-          </div>
+          <input
+            id="rut"
+            type="text"
+            inputMode="text"
+            placeholder="12.345.678-9"
+            value={rut}
+            onChange={(e) => handleRutChange(e.target.value)}
+            className={`w-full bg-black border rounded-lg px-4 py-3 text-white text-lg tracking-widest placeholder:text-zinc-600 focus:ring-2 transition-all ${
+              rutError
+                ? 'border-red-boxing focus:ring-red-boxing/30'
+                : 'border-gold/30 focus:border-gold focus:ring-gold/20'
+            }`}
+          />
           {rutError && (
             <p className="text-red-400 text-xs flex items-center gap-1">
               <span>⚠</span> {rutError}
