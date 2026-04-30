@@ -18,18 +18,13 @@ export default function HomePage() {
       {/* HERO */}
       <section className="flex flex-col items-center text-center gap-6">
         <Image
-          //src="/imagen9.png"
-          //src="/imagen10.png"
-          src="/CBT_fotografia.png"
-          //src="/CBT_fotografia.jp"
-          //src="/CBT_dorado.png"
-          //src="/imagen5.png"
-          alt="Charly Boxing Team"
-          width={500}
-          height={500}
-          priority
-          className="w-full max-w-sm md:max-w-lg object-contain drop-shadow-2xl mix-blend-screen"
-        />
+            src="/CBT_fotografia.png"
+            alt="Charly Boxing Team"
+            width={500}
+            height={500}
+            priority
+            className="w-full max-w-sm md:max-w-lg object-contain drop-shadow-2xl mix-blend-screen"
+          />
         <div className="space-y-2">
           <p className="text-silver text-sm md:text-base max-w-lg mx-auto leading-relaxed">
             Gimnasio de boxeo en Iquique, Chile. Entrenamiento de alto nivel

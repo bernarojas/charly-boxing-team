@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import Image from 'next/image'
 import { validarRut, formatearRut, normalizarRut } from '@/lib/rutUtils'
 
 interface ClienteData {
@@ -124,7 +125,13 @@ export default function SociosPage() {
     <div className="max-w-2xl mx-auto px-4 py-10 space-y-8">
       {/* Header */}
       <div className="text-center space-y-2">
-        <div className="text-4xl mb-2">🥊</div>
+        <Image
+          src="/imagen20.png"
+          alt="Guantes de box"
+          width={450}
+          height={450}
+          className="mx-auto mb-2 drop-shadow-lg mix-blend-screen"
+        />
         <h1 className="text-3xl font-black text-white">Consultar Plan</h1>
         <p className="text-silver text-sm">
           Ingresa tu RUT para ver el estado de tu membresía
