@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -17,9 +18,14 @@ export default function Navbar() {
     <nav className="bg-black border-b border-gold sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-black tracking-widest text-white">
-            C<span className="text-gold">B</span>T
-          </span>
+          <Image
+            src="/CBT_texto.png"
+            alt="Charly Boxing Team"
+            width={160}
+            height={40}
+            priority
+            className="h-12 w-auto object-contain mix-blend-screen"
+          />
           <span className="hidden sm:block text-xs text-gold font-semibold tracking-wider uppercase">
             Charly Boxing Team
           </span>

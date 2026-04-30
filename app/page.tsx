@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Image from 'next/image';
 import Link from 'next/link'
 
 const MapComponent = dynamic(() => import('@/components/MapComponent'), {
@@ -14,29 +15,22 @@ export default function HomePage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-16">
 
-      {/* HERO / LOGO */}
-      <section className="flex flex-col items-center text-center gap-8">
-        <div className="border-2 border-gold px-10 py-6 bg-black rounded-sm shadow-[0_0_40px_rgba(255,215,0,0.15)]">
-          <p
-            className="text-8xl md:text-9xl font-black text-white tracking-widest leading-none"
-            style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.9), 0 0 30px rgba(192,192,192,0.25)' }}
-          >
-            CBT
-          </p>
-          <p className="text-gold font-bold tracking-[0.25em] text-sm mt-2 italic">
-            — Charly Boxing Team —
-          </p>
-        </div>
-
+      {/* HERO */}
+      <section className="flex flex-col items-center text-center gap-6">
+        <Image
+          src="/CBT_fotografia.png"
+          //src="/CBT_dorado.png"
+          alt="Charly Boxing Team"
+          width={500}
+          height={500}
+          priority
+          className="w-full max-w-sm md:max-w-lg object-contain drop-shadow-2xl mix-blend-screen"
+        />
         <div className="space-y-2">
-          <h1 className="text-3xl md:text-4xl font-black text-white">
-            Charly Boxing Team
-          </h1>
           <p className="text-silver text-sm md:text-base max-w-lg mx-auto leading-relaxed">
             Gimnasio de boxeo en Iquique, Chile. Entrenamiento de alto nivel
           </p>
         </div>
-
         <Link
           href="/socios"
           className="inline-flex items-center gap-2 bg-red-boxing hover:bg-red-dark text-white font-bold px-7 py-3 rounded-lg transition-colors shadow-lg text-base"
