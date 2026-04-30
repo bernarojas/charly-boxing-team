@@ -140,7 +140,7 @@ export default function SociosPage() {
           <label htmlFor="rut" className="block text-sm font-semibold text-gold">
             RUT del socio
           </label>
-          <div className="flex gap-2">
+          <div className="relative">
             <input
               id="rut"
               type="text"
@@ -148,7 +148,7 @@ export default function SociosPage() {
               placeholder="12.345.678-9"
               value={rut}
               onChange={(e) => handleRutChange(e.target.value)}
-              className={`flex-1 bg-black border rounded-lg px-4 py-3 text-white text-lg tracking-widest placeholder:text-zinc-600 focus:ring-2 transition-all ${
+              className={`w-full bg-black border rounded-lg px-4 py-3 pr-16 text-white text-lg tracking-widest placeholder:text-zinc-600 focus:ring-2 transition-all ${
                 rutError
                   ? 'border-red-boxing focus:ring-red-boxing/30'
                   : 'border-gold/30 focus:border-gold focus:ring-gold/20'
@@ -157,7 +157,7 @@ export default function SociosPage() {
             <button
               type="button"
               onClick={() => handleRutChange(rut + 'k')}
-              className="bg-zinc-800 hover:bg-zinc-700 border border-gold/30 text-gold font-black text-lg px-4 rounded-lg transition-colors shrink-0"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-800 hover:bg-zinc-700 border border-gold/40 text-gold font-black text-sm px-3 py-1.5 rounded-md transition-colors"
             >
               K
             </button>
